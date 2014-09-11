@@ -1,4 +1,4 @@
-# Initiation à Linux
+# Initiation à Linux : TP
 
 ## Quelques commandes de base
 
