@@ -107,8 +107,6 @@ nsc jogsoul ping ssh scp
 
 evince feh wget
 
-{{md './varenv.md '}}
-
 ## Variables d'environnement
 
 ### Les variables utiles

@@ -3,7 +3,7 @@ DOWNLOADS=$(PICS)
 all: pdf
 
 pdf:
-	pandoc tp.md \
+	pandoc *.md \
 		-o tp.pdf
 
 clean:
