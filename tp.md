@@ -37,30 +37,44 @@ programme man (manual) qui vous donnera des informations sur la commande que
 vous lui envoyez en paramètre (`man ls` vous donnera des infos sur `ls` et
 `man cd` des informations sur `cd`).
 
-### Les fichiers
+### Les fichiers (et dossier)
 
 "Everything is a file" - *UNIX*
 
 #### Créer un fichier
 
-touch
+Pour créer un fichier, vous pouvez utiliser `touch`.
 
-> et pour un dossier ? mkdir
+Placez vous dans le répertoire où vous désirez créer un fichier et taper
+`touch mon_fichier.txt`
+
+Vous pouvez aussi ouvrir directement le fichier avec *vim* (un éditeur de texte
+en ligne de commande) et le sauvegarder ultérieurement : `vim mon_fichier.txt`
+et une fois dans vim : `:w` (write) suivi de la touch `Enter`.
+
+**Et pour créer un dossier, on fait comment ?**
+
+Il vous suffit d'utiliser la commande `mkdir` : `mkdir mon_dossier`
 
 ### Afficher le contenu d'un fichier
 
 Pour afficher (ou print) le contenu d'un fichier dans le terminal, entrez la
-commande `cat` (concatenate).
+commande `cat` (concatenate) : `cat mon_fichier.txt`
 
 #### Déplacer (ou renommer) un fichier
 
-mv
+Pour déplacer un fichier : `mv chemin/vers/fichier.txt nouveau/chemin/vers/fichier.txt` (move)
+
+Si vous voulez renommer un fichier, vous le déplacez de son ancien nom vers son
+nouveau nom, tout simplement : `mv fichier_old.txt fichier_new.txt`
 
 #### Copier un fichier
 
-cp
+Pour copier un fichier : `cp fichier1.txt fichier2.txt` (copy)
 
-_> et pour un dossier ? cp -r
+Si vous voulez copier un dossier complet (avec les fichiers et sous-dossiers à
+l'intérieur) vous devez rajouter un attribut à `cp` : l'attribut `-r`
+(recursive) : `cp -r mon_dossier/ mon_nouveau_dossier`.
 
 #### Supprimer un fichier
 
