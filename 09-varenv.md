@@ -82,8 +82,17 @@ rm
 
 ### Rechercher dans un fichier
 
-cat + grep
+Pour rechercher une chaîne de charactère particulière dans un fichier
+ou un ensemble de fichiers, il y a la commande `grep` : `grep unechaine`
+file.txt’ va afficher toutes les lignes du fichier file.txt contenant la chaîne
+de charactère "unechaine".
 
+En fait, grep est bien plus puissant que ça puisqu'il permet de rechercher
+n'importe quelle expression régulière : `grep "<[^>]*>" file.html` va chercher
+toutes les balises html dans file.html.
+
+Un paramètre utile est -r, qui permet de chercher récursivement dans un dossier
+: `grep -r pattern folder`.
 
 ### Gestion des droits sur les fichiers
 
