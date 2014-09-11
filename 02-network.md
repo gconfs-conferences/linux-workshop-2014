@@ -13,7 +13,9 @@ machine distante et de s'y identifier. Elle est utilisée pour sécuriser la
 connexion entre deux machines. On appelle cette connexion un `tunnel ssh`, à
 travers ce tunnel, la machine distante peut faire du `X11 forwarding`, c'est à
 dire qu'elle va considérer le tunnel comme un écran et envoyer l'interface
-graphique à travers le tunnel (c'est ainsi que foncionne les serveurs VNC).
+graphique à travers le tunnel (c'est ainsi que foncionnent les serveurs VNC).
+
+
 
 ### Media
 
