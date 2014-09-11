@@ -107,6 +107,25 @@ nsc jogsoul ping ssh scp
 
 evince feh wget
 
+{{md './varenv.md '}}
+
 ## Variables d'environnement
 
+### Les variables utiles
+
+    \$HOME, \$OLDPWD, \$EDITOR, \$PATH
+\$HOME est la variable contenant le chemin absolu vers le dossier home de
+l'utilisateur. Par exemple /root/ pour l'utilisateur 'root' et /home/user/
+pour l'utilisateur 'user'.
+
+Comme vu précédemment, la commande 'pwd' affiche le chemin absolu du dossier
+courant. \$OLDPWD est la variable qui sert à contenir le chemin absolu vers
+l'ancien dossier courant.
+
+\$EDITOR défini l'éditeur par défaut du système. Quand un programme a besoin
+d'un éditeur, il lance celui dont le nom est contenu dans la variable \$EDITOR
+
 ### Modifier une variable d'environnement
+export MAVARIABLE=valeur
+
+exemple : export EDITOR=vim
