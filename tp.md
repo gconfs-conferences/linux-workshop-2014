@@ -30,8 +30,6 @@ leur taille, de leur date de modification ou de création.
 
 Essayez `ls -lah` pour voir.
 
-***
-
 Si vous voulez en savoir plus, entrez la commande `man ls` qui appellera le
 programme man (manual) qui vous donnera des informations sur la commande que
 vous lui envoyez en paramètre (`man ls` vous donnera des infos sur `ls` et
