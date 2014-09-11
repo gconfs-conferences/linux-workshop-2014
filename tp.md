@@ -1,26 +1,56 @@
 # Initiation à Linux : TP
 
+Commencez par ouvrir un terminal et on va pouvoir parler sérieusement.
+
 ## Quelques commandes de base
 
-### Lister les fichiers
+### Changer de répertoire courant
 
-ls
+Sous Linux, quand vous ouvrez un terminal, une instance de votre shell
+(probablement /bin/bash de base) se lance. Le shell est un programme qui attend
+que vous lui donniez des commandes et qui va simplement s'occuper de les
+exécuter.
 
-### Afficher le contenu d'un fichier
+Une instance d'un shell possède ce qu'on appelle un *répertoire courant*. C'est
+en gros le dossier dans lequel vous vous trouvez actuellement.
 
-cat
+Pour connaître son répertoire courant, on entre la commande `pwd` (print
+working directory)
 
-### Rechercher dans un fichier
+Pour changer de répertoire courant, on entre la commande `cd` (change
+directory)
 
-cat + grep
+### Lister les fichiers/dossiers
 
-### Gestion des fichiers
+Pour lister les fichiers/dossiers du répertoire courant, on entre la commande
+`ls` (list)
+
+Vous pouvez aller plus loin avec `ls` et lister les fichiers en fonction de
+leur taille, de leur date de modification ou de création.
+
+Essayez `ls -lah` pour voir.
+
+***
+
+Si vous voulez en savoir plus, entrez la commande `man ls` qui appellera le
+programme man (manual) qui vous donnera des informations sur la commande que
+vous lui envoyez en paramètre (`man ls` vous donnera des infos sur `ls` et
+`man cd` des informations sur `cd`).
+
+### Les fichiers
+
+"Everything is a file" - *UNIX*
 
 #### Créer un fichier
 
 touch
 
 > et pour un dossier ? mkdir
+
+### Afficher le contenu d'un fichier
+
+Pour afficher (ou print) le contenu d'un fichier dans le terminal, entrez la
+commande `cat` (concatenate).
 
 #### Déplacer (ou renommer) un fichier
 
@@ -37,6 +67,10 @@ _> et pour un dossier ? cp -r
 rm
 
 > et pour un dossier ? rm -rf
+
+### Rechercher dans un fichier
+
+cat + grep
 
 
 ### Gestion des droits sur les fichiers
