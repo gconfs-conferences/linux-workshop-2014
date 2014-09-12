@@ -76,3 +76,77 @@ le résultat de son exécution (je clair Luc, ne pas ?).  Pour les utiliser il
 suffit de faire `` `expression` ``.  Cette merveilleuse technologie donne lieu à des
 expressions comme ``echo "Mon sous-shell a dit : `echo -n Je suis ton
 sous-shell`" `` qui après expansion donne `echo "Mon sous-shell a dit : Je suis ton sous-shell"`.
+
+
+# Exercices
+
+## Navigation
+
+Nous allons commencer par créer un dossier `GConfs`:
+\begin{itemize}
+\item Allez dans le dossier \texttt{Documents}. \hfill \texttt{ls,cd}
+\item Créez un nouveau dossier nommé \texttt{GConfs}. \hfill \texttt{mkdir}
+\end{itemize}\vspace{1em}
+
+Faisons un Test.:
+\begin{itemize}
+\item Créez un nouveau fichier nommé \texttt{toto.txt} \hfill \texttt{touch}
+\item Ecrivez "toto" dans le fichier toto.txt. \hfill `>,echo`
+\end{itemize}\vspace{1em}
+
+Nous voulons maintenant vérifier si "toto" est bien dans le fichier toto.txt:
+\begin{itemize}
+\item Affichez le contenu de toto.txt sur la sortie standard. \hfill `cat`
+\end{itemize}\vspace{1em}
+
+Nous avons ici utilisé une redirection afin d'écrire dans toto.txt, nous voulons maintenant faire quelque chose d'un peu plus intéressant, par exemple afficher le contenu d'un dossier et écrire ce dernier dans toto.txt, nous allons faire ça sur votre home:
+\begin{itemize}
+\item Nous pouvons faire un simple cd afin de revenir sur le home, mais les restrictions budgétaires nous obligent à réduire notre nombre de commandes au minimum.
+\item Affichez le contenu du home à la fin du fichier toto.txt sans bouger du dossier où vous êtes. \hfill \texttt{ls}, \texttt{\~}, \texttt{>>}
+\end{itemize}\vspace{1em}
+
+Nous allons maintenant voir comment déplacer et supprimer des fichiers:
+\begin{itemize}
+\item Créez un nouveau dossier nommé foo/.
+\item Copiez toto.txt dans foo/. \hfill `cp`
+\item Allez dans foo/.
+\item Changez le nom de toto.txt en tata.txt. \hfill `mv`
+\item Déplacez tata.txt dans le dossier gconfs. \hfill `mv`
+\item Remarque: on aurait pu faire les deux dernière instruction en même temps: `mv toto.txt ../tata.txt`
+\item Déplacez vous sur gconfs. \hfill `..`
+\item Supprimez le dossier foo et toto.txt. \hfill `rm`
+\item Créez les dossiers je/peux/pas/gconfs en une seul ligne de commande et allez dans le dossier peux/. \hfill `mkdir`
+\item Retournez dans gconfs/ sans taper "gconfs". \hfill `cd`
+\end{itemize}\vspace{1em}
+
+\subsection{Commandes et options utiles}
+\begin{itemize}
+\item Affichez le nombre de lignes d'un fichier. \hfill `wc`
+\item Affichez le nombre de mots de chaque fichier .c et .h d'un dossier. \hfill `globbing, wc`
+\item Affichez le nombre d'occurences de "gconfs" dans un fichier. \hfill `grep`
+  \begin{itemize}
+  \item Même chose avec la homepage de gconfs.fr. \hfill `curl, wget`
+  \end{itemize}
+\item Affichez l'arborescence d'un dossier \hfill `tree`
+  \begin{itemize}
+  \item Montrez leurs permissions avec une option de la même commande.
+  \end{itemize}
+\item Créez les dossiers ~/1/2/3/4/…/1337/. \hfill `script`
+\item Trouvez tous les .jpg de votre home. \hfill `find`
+\item Trouvez le chemin absolu du binaire git. \hfill `which`
+\item Remplacez tous les nombres d'un fichier par -<nombre>. \hfill `sed`
+\item Créez le script \texttt{dettes.sh} qui s'utilise comme ceci \texttt{dettes.sh 42 69 1337} et affiche "Je dois $<$somme$>$ euros.".
+  \begin{itemize}
+  \item Remplacez "Je dois" par "Bruce me doit". \hfill `|, sed`
+  \end{itemize}
+\item My Little Confloose, retournez votre écran (puis remettez-le à l'endroit, ça peut servir) \hfill `xrandr`
+  \begin{itemize}
+  \item Trouvez d'autres moyens de faire comprendre à vos camarades qu'il faut se locker en SM.
+  \end{itemize}
+%\item Testez des dispositions de clavier un peu plus sympa (us intl, fr oss, bépo, dvorak) \hfill `setxkbmap`
+%  \begin{itemize}
+%  \item Exercice : tapez "Ça et là", "Œuf dur", "© login_x", "ÉPÎTÀ".
+%  \end{itemize}
+\end{itemize}
+
+\end{document}
