@@ -4,6 +4,7 @@ all: pdf
 
 pdf:
 	pandoc *.md \
+		--include-in-header header.tex \
 		-o tp.pdf
 
 clean:
